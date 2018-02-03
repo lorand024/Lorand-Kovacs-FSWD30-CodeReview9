@@ -1,0 +1,13 @@
+Count how many guests we have with the last name 'Doe':
+
+SELECT COUNT(guest_id) 
+FROM guest WHERE guest_lastname = 'Doe';
+
+Count how many guests was born before 1994 what are their names and birth dates, and group them by birth date:
+
+SELECT guest_firstname, guest_lastname, guest_id, birth_date,
+COUNT(*)
+FROM guest
+WHERE birth_date < '1994-01-01'
+GROUP BY birth_date;
+
